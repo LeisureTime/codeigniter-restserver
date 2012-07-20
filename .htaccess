@@ -1,0 +1,15 @@
+php_value upload_max_filesize 10M
+php_value post_max_size 20M
+php_value memory_limit 128M
+
+SetOutputFilter DEFLATE 
+
+AddOutputFilterByType DEFLATE text/html text/xml # or any file type you wish
+
+RewriteEngine On
+RewriteRule \.(jpe?g|gif|bmp|png)$ - [F]
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+RewriteRule ^.*$ index.php [NC,L]
