@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= '';
+$config['base_url']	= 'http://192.168.86.99/codeigniter-restserver/';
 
 /*
 |--------------------------------------------------------------------------
@@ -354,6 +354,7 @@ $config['rewrite_short_tags'] = FALSE;
 |
 */
 $config['proxy_ips'] = '';
+
 
 
 /* End of file config.php */
